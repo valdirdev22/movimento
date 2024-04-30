@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Page Title</title> 
+</head> 
+<body> 
+<div id="quadrado"> 
+</div> 
+
+<h1>CIRCULO MÓVEL</h1> 
+<table> 
+<tr> 
+<td></td> 
+<td><button onclick="cima();">Cima</button></td> <td></td> 
+</tr> 
+<tr> 
+<td><button onclick="esquerda();">Esquerda</button></td> <td></td> 
+<td><button onclick="direita();">Direita</button></td> </tr> 
+<tr> 
+<td></td> 
+<td><button onclick="baixo();">Baixo</button></td> <td></td> 
+</tr> 
+</table> 
+<table> 
+<tr> 
+<td><button onclick="rosa();">pink</button></td>
+</tr> 
+<tr> 
+<td><button onclick="amarelo();">yelow</button></td> 
+</tr> 
+<tr> 
+<td><button onclick="azul();">blue</button></td> 
+</tr> 
+</table> 
+
+<script> 
+var topo=50; 
+var esq = 200; 
+function cima(){ 
+topo -= 5; 
+document.getElementById("quadrado").style.top = topo + "px"; } 
+function baixo(){ 
+topo += 5; 
+document.getElementById("quadrado").style.top = topo + "px"; } 
+function esquerda(){ 
+esq -= 5; 
+document.getElementById("quadrado").style.left = esq + "px"; } 
+function direita(){ 
+esq += 5; 
+document.getElementById("quadrado").style.left = esq + "px"; } 
+function rosa(){ 
+document.body.style.backgroundColor = "pink"; 
+} 
+function amarelo(){ 
+document.body.style.backgroundColor = "yellow"; } 
+function azul(){ 
+document.body.style.backgroundColor = "blue";
+} 
+</script> 
+
+<style> 
+#quadrado{ 
+position: absolute; 
+top: 50px; 
+left: 200px; 
+width: 80px; 
+height: 80px; 
+border-radius: 50%;
+background-color: red; 
+} 
+table{ 
+width: 200px; 
+border: none; 
+} 
+</style> 
+
+
+</body> 
+</html>
